@@ -1,0 +1,2 @@
+# INF 653 Final Project
+## In this project we set up a REST api. The user can perform all CRUD operations through postman or by editing the GET parameters in the url. I made an index.php file so that the user can see any quote they want with the ability to specify author or category.
