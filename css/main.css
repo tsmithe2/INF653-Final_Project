@@ -1,0 +1,48 @@
+#content
+{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em;
+    width: 80%;
+    border-radius: 1em;
+    border: 1px solid black;
+}
+form
+{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+form, select
+{
+    height: 40px;
+}
+form, input[type="submit"]
+{
+    height: 40px;
+    margin-left: 9px;
+    margin-bottom: 5px;
+}
+#content, table
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+@media only screen and (max-width: 650px)
+{
+    form
+    {
+        margin-bottom: 8em;
+        width: 81%;
+        display: block;
+    }
+    .sel
+    {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: auto;
+    }
+}
