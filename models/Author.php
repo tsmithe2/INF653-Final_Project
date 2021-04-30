@@ -33,7 +33,7 @@
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $this->author = $row["author"];
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
 
             for ($i = 0; $i < count($authors_obj); $i++)
@@ -76,7 +76,7 @@
             $this->author = htmlspecialchars(strip_tags($this->author));
             $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
 
             if ($this->id > count($authors_obj) || 1 === preg_match('~[0-9]~', $this->author) || $this->id <= 0 || empty($this->author))
@@ -103,7 +103,7 @@
 
             $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
 
             if ($this->id > count($authors_obj) || $this->id <= 0)

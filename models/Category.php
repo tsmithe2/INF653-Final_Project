@@ -33,7 +33,7 @@
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $this->category = $row['category'];
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             for ($i = 0; $i < count($categories_obj); $i++)
@@ -77,7 +77,7 @@
             $this->category = htmlspecialchars(strip_tags($this->category));
             $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             if ($this->id > count($categories_obj) || 1 === preg_match('~[0-9]~', $this->category) || $this->id <= 0 || empty($this->category))
@@ -104,7 +104,7 @@
 
             $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             if ($this->id > count($categories_obj) || $this->id <= 0)

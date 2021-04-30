@@ -8,7 +8,7 @@
     $db = $database->connect();
     $category = new Category($db);
     $category->id = isset($_GET["id"]) ? $_GET["id"] : die();
-    $categories = file_get_contents("http://localhost/final_project/api/categories/");
+    $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
     $categories_obj = json_decode($categories, true);
 
     //if id is invalid then show error message.

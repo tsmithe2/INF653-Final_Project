@@ -49,7 +49,7 @@
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             $this->quote = $row['quote'];
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
 
             for ($i = 0; $i < count($authors_obj); $i++)
@@ -61,7 +61,7 @@
                 }
             }
 
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             for ($i = 0; $i < count($categories_obj); $i++)
@@ -83,9 +83,9 @@
             $this->authorId = htmlspecialchars(strip_tags($this->authorId));
             $this->categoryId = htmlspecialchars(strip_tags($this->categoryId));
 
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             if (empty($this->quote) || empty($this->authorId) || empty($this->categoryId) || 
@@ -118,13 +118,13 @@
             $this->authorId = htmlspecialchars(strip_tags($this->authorId));
             $this->categoryId = htmlspecialchars(strip_tags($this->categoryId));
 
-            $quotes = file_get_contents("http://localhost/final_project/api/quotes/");
+            $quotes = file_get_contents("https://inf653-final-project.herokuapp.com/api/quotes/");
             $quotes_obj = json_decode($quotes, true);
 
-            $authors = file_get_contents("http://localhost/final_project/api/authors/");
+            $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
             $authors_obj = json_decode($authors, true);
 
-            $categories = file_get_contents("http://localhost/final_project/api/categories/");
+            $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
             $categories_obj = json_decode($categories, true);
 
             if ($this->id > count($quotes_obj) || $this->authorId > count($authors_obj) || 
@@ -156,7 +156,7 @@
 
             $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $quotes = file_get_contents("http://localhost/final_project/api/quotes/");
+            $quotes = file_get_contents("https://inf653-final-project.herokuapp.com/api/quotes/");
             $quotes_obj = json_decode($quotes, true);
 
             if ($this->id > count($quotes_obj) || $this->id <= 0)

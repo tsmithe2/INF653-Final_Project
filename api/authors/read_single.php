@@ -9,7 +9,7 @@
     $author = new Author($db);
     $author->id = isset($_GET["id"]) ? $_GET["id"] : die();
 
-    $authors = file_get_contents("http://localhost/final_project/api/authors/");
+    $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
     $authors_obj = json_decode($authors, true);
 
     //if id is invalid then show error message.

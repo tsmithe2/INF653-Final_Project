@@ -8,7 +8,7 @@
     $db = $database->connect();
     $quote = new Quote($db);
     $quote->id = isset($_GET["id"]) ? $_GET["id"] : die();
-    $quotes = file_get_contents("http://localhost/final_project/api/quotes/"); //quotes
+    $quotes = file_get_contents("https://inf653-final-project.herokuapp.com/api/quotes/");
     $quotes_obj = json_decode($quotes, true);
 
     //if id is invalid then show error message
