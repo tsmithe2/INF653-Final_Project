@@ -46,7 +46,7 @@
                     <th>Category</th>
                 </tr>
                 <?php
-                    $link = "https://inf653-final-project.herokuapp.com/api/quotes/?";
+                    $link = "http://inf653-final-project.herokuapp.com/api/quotes/?";
                     if (isset($_GET["authorId"]))
                     {
                         $link .= "authorId=" . $_GET["authorId"] . "&";
