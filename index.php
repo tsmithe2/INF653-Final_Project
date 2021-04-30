@@ -1,8 +1,8 @@
 <?php
-    $authors = file_get_contents("http://inf653-final-project.herokuapp.com/api/authors/");
+    $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
     $authors_obj = json_decode($authors, true);
 
-    $categories = file_get_contents("http://inf653-final-project.herokuapp.com/api/categories/");
+    $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
     $categories_obj = json_decode($categories, true);
 ?>
 
@@ -46,7 +46,7 @@
                     <th>Category</th>
                 </tr>
                 <?php
-                    $link = "http://inf653-final-project.herokuapp.com/api/quotes/?";
+                    $link = "https://inf653-final-project.herokuapp.com/api/quotes/?";
                     if (isset($_GET["authorId"]))
                     {
                         $link .= "authorId=" . $_GET["authorId"] . "&";

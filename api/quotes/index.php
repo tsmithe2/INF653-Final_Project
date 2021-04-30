@@ -22,9 +22,9 @@
 
         $json = json_encode($quote_arr);
         $quote_obj = json_decode($json, true);
-        $authors = file_get_contents("http://localhost/final_project/api/authors/"); //authors
+        $authors = file_get_contents("https://inf653-final-project.herokuapp.com/api/authors/");
         $authors_obj = json_decode($authors, true);
-        $categories = file_get_contents("http://localhost/final_project/api/categories/"); //categories
+        $categories = file_get_contents("https://inf653-final-project.herokuapp.com/api/categories/");
         $categories_obj = json_decode($categories, true);
 
         for ($i = 0; $i < count($quote_obj); $i++)
