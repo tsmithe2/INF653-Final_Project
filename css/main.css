@@ -36,13 +36,23 @@ form, input[type="submit"]
     form
     {
         margin-bottom: 8em;
-        width: 100%;
+        width: 81%;
         display: block;
     }
     .sel
     {
         margin-bottom: 1em;
         margin-left: 1em;
+        margin-right: auto;
+    }
+    #content, table
+    {
+        table-layout: fixed;
+        display: block;
+        width: 97%;
+        overflow-x: scroll;
+        margin-bottom: 10px;
+        margin-left: auto;
         margin-right: auto;
     }
 }
